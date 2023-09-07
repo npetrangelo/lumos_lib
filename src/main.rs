@@ -31,7 +31,8 @@ fn view(app: &App, model: &Model, frame: Frame) {
         .h(200.0)
         .x_y(200.0, -100.0);
 
-    for i in app.window_rect().x.step_by(50) {
+    let w = app.window_rect().w() as i32;
+    for i in (-w/2..w/2).step_by(100) {
         draw.ellipse()
             .color(RED)
             .x_y(i as f32, -100.0);
