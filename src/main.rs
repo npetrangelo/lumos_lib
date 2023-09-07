@@ -32,9 +32,10 @@ fn view(app: &App, model: &Model, frame: Frame) {
         .x_y(200.0, -100.0);
 
     let w = app.window_rect().w() as i32;
-    for i in (-w/2..w/2).step_by(100) {
+    for i in (-w/2..w/2).step_by(30) {
         draw.ellipse()
             .color(RED)
+            .radius(10.0)
             .x_y(i as f32, -100.0);
     }
 
